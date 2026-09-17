@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+<title>Class Attendance</title>
+<link rel="stylesheet" href="styleclassattandance.css">
+</head>
+<script src="script.js"></script>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>📋 Class Attendance</h1>
+      <div class="sub">add the students,mark P/A  , then share/download the file </div>
+    </div>
+    <div class="row" style="gap:8px;">
+      <label style="margin:0;">
+        <input type="date" id="dateInput">
+      </label>
+    </div>
+  </header>
+
+  <div class="card">
+    <div class="row" style="align items:flex-end;">
+      <div class="field">
+        <label for="nameInput">Student Name</label>
+        <input type="text" id="nameInput" placeholder="e.g: ali">
+      </div>
+      <div class="field">
+        <label for="cmsInput">CMS Number</label>
+        <input type="text" id="cmsInput" placeholder="e.g: f24-bsai-0022">
+      </div>
+      <button class="btn primary" id="addBtn">+ Add Student</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="toolbar">
+      <div class="stats" id="statsBar">Total: <b>0</b> | Present: <b>0</b> | Absent: <b>0</b></div>
+      <div class="row" style="gap:8px;">
+        <button class="btn ghost" id="markAllP">Mark All P</button>
+        <button class="btn ghost" id="markAllA">Mark All A</button>
+        <button class="btn primary" id="downloadBtn">⬇ Download CSV</button>
+      </div>
+    </div>
+    <div class="tablewrap">
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th style="text align:right;">Name</th>
+            <th style="text align:right;">CMS #</th>
+            <th style="text align:left;">Attendance</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="empty" id="emptyMsg">no student are added.</div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
